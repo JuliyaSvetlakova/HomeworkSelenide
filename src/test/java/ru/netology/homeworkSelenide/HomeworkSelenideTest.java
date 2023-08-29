@@ -27,7 +27,7 @@ public class HomeworkSelenideTest {
         $("[data-test-id='phone'] input").setValue("+79990000000");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-        $(". notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20))
+        $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(20))
         .shouldHave(Condition.exactText("Встреча успешно забронирована на " + desiredDate));
 
 
